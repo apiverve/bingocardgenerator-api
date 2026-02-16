@@ -44,7 +44,10 @@ from apiverve_bingocardgenerator.apiClient import BingocardgeneratorAPIClient
 # Initialize the client with your APIVerve API key
 api = BingocardgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "size": 5, "freeSpace": true }
+query = {
+    "size": 5,
+    "freeSpace": true
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "size": 5, "freeSpace": true }
+query = {
+    "size": 5,
+    "freeSpace": true
+}
 ```
 
 ###### Simple Request
@@ -173,7 +179,10 @@ from apiverve_bingocardgenerator.apiClient import BingocardgeneratorAPIClient, B
 
 api = BingocardgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "size": 5, "freeSpace": true }
+query = {
+    "size": 5,
+    "freeSpace": true
+}
 
 try:
     result = api.execute(query)
@@ -194,7 +203,10 @@ from apiverve_bingocardgenerator.apiClient import BingocardgeneratorAPIClient, B
 
 api = BingocardgeneratorAPIClient("[YOUR_API_KEY]")
 
-query = { "size": 5, "freeSpace": true }
+query = {
+    "size": 5,
+    "freeSpace": true
+}
 
 try:
     result = api.execute(query)
@@ -228,7 +240,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_bingocardgenerator.apiClient import BingocardgeneratorAPIClient, BingocardgeneratorAPIClientError
 
-query = { "size": 5, "freeSpace": true }
+query = {
+    "size": 5,
+    "freeSpace": true
+}
 
 # Using context manager ensures proper cleanup
 with BingocardgeneratorAPIClient("[YOUR_API_KEY]") as api:
@@ -254,7 +269,10 @@ from apiverve_bingocardgenerator.apiClient import BingocardgeneratorAPIClient
 # Enable debug mode
 api = BingocardgeneratorAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "size": 5, "freeSpace": true }
+query = {
+    "size": 5,
+    "freeSpace": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -269,8 +287,12 @@ from apiverve_bingocardgenerator.apiClient import BingocardgeneratorAPIClient
 
 api = BingocardgeneratorAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "size": 5,
+    "freeSpace": true
+}
+
 try:
-    query = { "size": 5, "freeSpace": true }
     result = api.execute(query)
     print(result)
 finally:
