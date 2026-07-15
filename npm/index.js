@@ -30,7 +30,7 @@ class bingocardgeneratorWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/bingocardgenerator';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"size":{"type":"integer","required":false,"min":3,"max":10,"default":5},"freeSpace":{"type":"boolean","required":false,"default":true}};
+        this.validationRules = {"size":{"type":"integer","required":false,"min":3,"max":10,"default":5},"freeSpace":{"type":"boolean","required":false,"default":true},"image":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
