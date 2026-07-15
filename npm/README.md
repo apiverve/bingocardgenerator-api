@@ -61,7 +61,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   size: 5,
-  freeSpace: true
+  freeSpace: true,
+  image: false
 };
 
 api.execute(query, function (error, data) {
@@ -82,7 +83,8 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   size: 5,
-  freeSpace: true
+  freeSpace: true,
+  image: false
 };
 
 api.execute(query)
@@ -104,7 +106,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   size: 5,
-  freeSpace: true
+  freeSpace: true,
+  image: false
 };
 
     try {
@@ -127,42 +130,42 @@ async function makeRequest() {
   "data": {
     "card": [
       [
-        6,
-        25,
-        45,
-        55,
+        14,
+        19,
+        42,
+        47,
         71
       ],
       [
-        3,
-        28,
-        42,
-        60,
-        67
-      ],
-      [
-        7,
-        23,
-        "FREE",
-        46,
-        65
-      ],
-      [
-        9,
+        4,
         17,
-        38,
-        51,
-        64
+        36,
+        50,
+        69
       ],
       [
-        2,
-        22,
-        40,
-        47,
-        74
+        11,
+        18,
+        "FREE",
+        53,
+        73
+      ],
+      [
+        15,
+        23,
+        41,
+        52,
+        68
+      ],
+      [
+        8,
+        27,
+        43,
+        58,
+        75
       ]
     ],
-    "html": "<html><head><title>Bingo Card</title><style>body {font-family: Arial, sans-serif; padding: 20px;}table {border-collapse: collapse; margin: 0 auto;}td {text-align: center; width: 60px; height: 60px; border: 2px solid #000; font-size: 20px; font-weight: bold;}th {text-align: center; width: 60px; height: 40px; border: 2px solid #000; font-size: 24px; font-weight: bold; background-color: #4CAF50; color: white;}.free-space {background-color: #FFD700; font-size: 14px;}</style></head><body><table><tr><th>B</th><th>I</th><th>N</th><th>G</th><th>O</th></tr><tr><td class=''>6</td><td class=''>25</td><td class=''>45</td><td class=''>55</td><td class=''>71</td></tr><tr><td class=''>3</td><td class=''>28</td><td class=''>42</td><td class=''>60</td><td class=''>67</td></tr><tr><td class=''>7</td><td class=''>23</td><td class='free-space'>FREE</td><td class=''>46</td><td class=''>65</td></tr><tr><td class=''>9</td><td class=''>17</td><td class=''>38</td><td class=''>51</td><td class=''>64</td></tr><tr><td class=''>2</td><td class=''>22</td><td class=''>40</td><td class=''>47</td><td class=''>74</td></tr></table></body></html>",
+    "html": "<html><head><title>Bingo Card</title><style>body {font-family: Arial, sans-serif; padding: 20px;}table {border-collapse: collapse; margin: 0 auto;}td {text-align: center; width: 60px; height: 60px; border: 2px solid #000; font-size: 20px; font-weight: bold;}th {text-align: center; width: 60px; height: 40px; border: 2px solid #000; font-size: 24px; font-weight: bold; background-color: #4CAF50; color: white;}.free-space {background-color: #FFD700; font-size: 14px;}</style></head><body><table><tr><th>B</th><th>I</th><th>N</th><th>G</th><th>O</th></tr><tr><td class=''>14</td><td class=''>19</td><td class=''>42</td><td class=''>47</td><td class=''>71</td></tr><tr><td class=''>4</td><td class=''>17</td><td class=''>36</td><td class=''>50</td><td class=''>69</td></tr><tr><td class=''>11</td><td class=''>18</td><td class='free-space'>FREE</td><td class=''>53</td><td class=''>73</td></tr><tr><td class=''>15</td><td class=''>23</td><td class=''>41</td><td class=''>52</td><td class=''>68</td></tr><tr><td class=''>8</td><td class=''>27</td><td class=''>43</td><td class=''>58</td><td class=''>75</td></tr></table></body></html>",
     "size": 5,
     "freeSpace": true,
     "totalCells": 25,
@@ -174,10 +177,10 @@ async function makeRequest() {
       "blackout (all cells)"
     ],
     "image": {
-      "imageName": "7a2d29de-e859-4781-9f2b-07e710ce844a_bingo.png",
+      "imageName": "8dcb6cee-a419-4501-a13c-ff6eafd393b7_bingo.png",
       "format": ".png",
-      "downloadURL": "https://storage.googleapis.com/apiverve.appspot.com/bingocardgenerator/7a2d29de-e859-4781-9f2b-07e710ce844a_bingo.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1763673874&Signature=LqXQF7sY%2FlwYmx9APPty2uCXUfcCOVd%2Fa2%2BAHfbz%2FAdiP3lKDOvWXoL%2FyHbbAkha7ZV4fU4T%2BuJNhzoR4qjBZJS1VALQMmy7uriek4cEn%2BbYD7A4MPn5o3cEVl%2Bx2bsNpRR8LkHeVmrFdlxjjkL9CF36%2BfeX41TNxGwRo8UIfYsGsiMsCu6RjZcDsamGKkh%2FQsPwoAwH%2F2UyDIvAHaeeJDuBiLj7eW51VI8ho0UkdFblw3RD1md%2BJwWQSvuMoUpU1tfxaGHUUImp%2BDF1lqBeeYFBwOHyoypGnp37bkwpkCqW3tBTatWgB5oXFtmBX6lqglINn0tNHCm0sJs2wxS%2BLw%3D%3D",
-      "expires": 1763673874491
+      "downloadURL": "https://storage.googleapis.com/apiverve/APIData/bingocardgenerator/8dcb6cee-a419-4501-a13c-ff6eafd393b7_bingo.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010022&Signature=ErKaS3I1DaHCBxYRxnjx5QLHm0S3zfpJIWzz7BosGyhDwYSejCHlfcSI%2BKOHJzxEiUdSWFFt947%2BLzHGpVZrLYPxGGvgCVPOKZ4H9vfgyJPP%2BF9LICc9kLG6%2FwevlPsAHHHLjoLS%2F7OVByiwzTWguRzcbyYT44XpbbU0IsOA40S7Utqt%2BjAC5%2FSfhW4z%2FdJE2yXsSNqr3acEJB70cVde3qkP80Iv6H7%2FZB08EDjbakauJmjASJ86H%2BWM2b9BPo250bBzLtGPxW8KZUVgy79SDxJu8VVnzAhiWzcmih9UrBUvejuxkbPIAx6ohwHepmh414G0wvAcxtHRaXx4O5cr7g%3D%3D",
+      "expires": 1766010022446
     }
   }
 }
