@@ -36,6 +36,13 @@ paths:
           required: false
           description: Include free space in center
           example: true
+        - name: image
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Set to true to generate a downloadable bingo card image
+          example: true
       responses:
         '200':
           description: Successful Response
