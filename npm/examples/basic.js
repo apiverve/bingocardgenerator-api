@@ -16,7 +16,8 @@ const api = new bingocardgeneratorAPI({
 // Example query
 var query = {
   size: 5,
-  freeSpace: true
+  freeSpace: true,
+  image: false
 };
 
 // Make the API request using callback
