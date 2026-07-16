@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/bingocardgenerator",
+    "description": "Bingo Card Generator creates customizable bingo cards with random numbers, HTML rendering, and downloadable PNG images.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "bingocardgenerator",
+        "bingo card",
+        "bingo generator",
+        "game card",
+        "bingo board",
+        "random bingo"
+    ],
+    "homepage": "https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/bingocardgenerator",
+        "source": "https://github.com/apiverve/bingocardgenerator-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Bingocardgenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Bingocardgenerator\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
