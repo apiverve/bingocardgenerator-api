@@ -14,12 +14,18 @@ namespace APIVerve.API.BingoCardGenerator
         /// Card size (3x3 to 10x10)
         /// </summary>
         [JsonProperty("size")]
-        public string Size { get; set; }
+        public int? Size { get; set; }
 
         /// <summary>
         /// Include free space in center
         /// </summary>
         [JsonProperty("freeSpace")]
-        public string FreeSpace { get; set; }
+        public bool? FreeSpace { get; set; }
+
+        /// <summary>
+        /// Set to true to generate a downloadable bingo card image
+        /// </summary>
+        [JsonProperty("image")]
+        public bool? Image { get; set; }
     }
 }
