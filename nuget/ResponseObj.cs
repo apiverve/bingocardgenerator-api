@@ -25,6 +25,9 @@ namespace APIVerve.API.BingoCardGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,13 +39,13 @@ namespace APIVerve.API.BingoCardGenerator
         public string Html { get; set; }
 
         [JsonProperty("size")]
-        public long Size { get; set; }
+        public long? Size { get; set; }
 
         [JsonProperty("freeSpace")]
-        public bool FreeSpace { get; set; }
+        public bool? FreeSpace { get; set; }
 
         [JsonProperty("totalCells")]
-        public long TotalCells { get; set; }
+        public long? TotalCells { get; set; }
 
         [JsonProperty("winningPatterns")]
         public string[] WinningPatterns { get; set; }
@@ -63,7 +66,19 @@ namespace APIVerve.API.BingoCardGenerator
         public Uri DownloadUrl { get; set; }
 
         [JsonProperty("expires")]
-        public long Expires { get; set; }
+        public long? Expires { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 
     public partial struct Card
@@ -73,5 +88,6 @@ namespace APIVerve.API.BingoCardGenerator
 
         public static implicit operator Card(long Integer) => new Card { Integer = Integer };
         public static implicit operator Card(string String) => new Card { String = String };
+        public bool IsNull => Integer == null && String == null;
     }
 }
