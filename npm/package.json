@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/bingocardgenerator",
-  "version": "1.2.0",
-  "description": "Bingo Card Generator creates customizable bingo cards with random numbers, HTML rendering, and downloadable PNG images.",
+  "version": "1.2.2",
+  "description": "Bingo Card Generator is a bingo API that creates customizable bingo cards with random numbers as JSON, with HTML rendering and downloadable PNG images on paid plans.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "bingo card", "bingo generator", "game card", "bingo board", "random bingo"
+    "bingo card generator api", "bingo api", "bingo games api", "json bingo card", "bingo card"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/bingocardgenerator-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/bingocardgenerator?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/bingocardgenerator?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
