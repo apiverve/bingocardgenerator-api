@@ -1,7 +1,7 @@
 {
     "name": "apiverve/bingocardgenerator",
-    "description": "Bingo Card Generator creates customizable bingo cards with random numbers, HTML rendering, and downloadable PNG images.",
-    "version": "1.2.0",
+    "description": "Bingo Card Generator is a bingo API that creates customizable bingo cards with random numbers as JSON, with HTML rendering and downloadable PNG images on paid plans.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "bingocardgenerator",
-        "bingo card",
-        "bingo generator",
-        "game card",
-        "bingo board",
-        "random bingo"
+        "bingo card generator api",
+        "bingo api",
+        "bingo games api",
+        "json bingo card",
+        "bingo card"
     ],
-    "homepage": "https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/bingocardgenerator",

@@ -1,6 +1,6 @@
 # Bingo Card Generator API - PHP Package
 
-Bingo Card Generator creates customizable bingo cards with random numbers, HTML rendering, and downloadable PNG images.
+Bingo Card Generator is a bingo API that creates customizable bingo cards with random numbers as JSON, with HTML rendering and downloadable PNG images on paid plans.
 
 ## Installation
 
@@ -138,11 +138,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/bingocardgenerator?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/bingocardgenerator?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/bingocardgenerator?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
