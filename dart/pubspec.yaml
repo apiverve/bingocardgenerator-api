@@ -1,7 +1,7 @@
 name: apiverve_bingocardgenerator
-description: Bingo Card Generator creates customizable bingo cards with random numbers, HTML rendering, and downloadable PNG images.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/bingocardgenerator?utm_source=dart&utm_medium=homepage
+description: "Bingo Card Generator is a bingo API that creates customizable bingo cards with random numbers as JSON, with HTML rendering and downloadable PNG images on paid plans."
+version: 1.2.3
+homepage: https://apiverve.com/marketplace/bingocardgenerator?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/bingocardgenerator-api/tree/main/dart
 
 environment:

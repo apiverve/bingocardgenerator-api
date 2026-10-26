@@ -46,11 +46,12 @@ final _formatPatterns = {
 
 /// Bingo Card Generator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/bingocardgenerator?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/bingocardgenerator?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [size] - Card size (3x3 to 10x10) [min: 3, max: 10]
 /// * [freeSpace] - Include free space in center
+/// * [image] - Set to true to generate a downloadable bingo card image
 class BingocardgeneratorClient {
   final String apiKey;
   final String baseUrl;
@@ -60,6 +61,7 @@ class BingocardgeneratorClient {
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'size': ValidationRule(type: 'integer', required: false, min: 3, max: 10),
     'freeSpace': ValidationRule(type: 'boolean', required: false),
+    'image': ValidationRule(type: 'boolean', required: false),
   };
 
   BingocardgeneratorClient(this.apiKey, {

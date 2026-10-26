@@ -6,22 +6,50 @@ class BingocardgeneratorResponse {
   final dynamic error;
   final BingocardgeneratorData? data;
 
+  /// Set only when the current plan locks one or more fields; null otherwise.
+  final PremiumInfo? premium;
+
   BingocardgeneratorResponse({
     required this.status,
     this.error,
     this.data,
+    this.premium,
   });
 
   factory BingocardgeneratorResponse.fromJson(Map<String, dynamic> json) => BingocardgeneratorResponse(
     status: json['status'] as String? ?? '',
     error: json['error'],
     data: json['data'] != null ? BingocardgeneratorData.fromJson(json['data']) : null,
+    premium: json['premium'] != null ? PremiumInfo.fromJson(json['premium']) : null,
   );
 
   Map<String, dynamic> toJson() => {
     'status': status,
     if (error != null) 'error': error,
     if (data != null) 'data': data,
+    if (premium != null) 'premium': premium!.toJson(),
+  };
+}
+
+/// Describes fields the current plan does not unlock. Locked fields arrive as null
+/// in [data], and [lockedFields] names them (nested ones use dot paths).
+class PremiumInfo {
+  final String? message;
+  final String? upgradeUrl;
+  final List<String>? lockedFields;
+
+  PremiumInfo({this.message, this.upgradeUrl, this.lockedFields});
+
+  factory PremiumInfo.fromJson(Map<String, dynamic> json) => PremiumInfo(
+    message: json['message'] as String?,
+    upgradeUrl: json['upgrade_url'] as String?,
+    lockedFields: (json['locked_fields'] as List?)?.map((e) => e.toString()).toList(),
+  );
+
+  Map<String, dynamic> toJson() => {
+    if (message != null) 'message': message,
+    if (upgradeUrl != null) 'upgrade_url': upgradeUrl,
+    if (lockedFields != null) 'locked_fields': lockedFields,
   };
 }
 
@@ -30,9 +58,9 @@ class BingocardgeneratorResponse {
 class BingocardgeneratorData {
   List<BingocardgeneratorDataCardItem>? card;
   String? html;
-  int? size;
+  num? size;
   bool? freeSpace;
-  int? totalCells;
+  num? totalCells;
   List<String>? winningPatterns;
   BingocardgeneratorDataImage? image;
 
@@ -58,11 +86,11 @@ class BingocardgeneratorData {
 }
 
 class BingocardgeneratorDataCardItem {
-  int? 0;
-  int? 1;
-  int? 2;
-  int? 3;
-  int? 4;
+  num? 0;
+  num? 1;
+  num? 2;
+  num? 3;
+  num? 4;
 
   BingocardgeneratorDataCardItem({
     this.0,
@@ -85,7 +113,7 @@ class BingocardgeneratorDataImage {
   String? imageName;
   String? format;
   String? downloadURL;
-  int? expires;
+  num? expires;
 
   BingocardgeneratorDataImage({
     this.imageName,
@@ -105,14 +133,17 @@ class BingocardgeneratorDataImage {
 class BingocardgeneratorRequest {
   int? size;
   bool? freeSpace;
+  bool? image;
 
   BingocardgeneratorRequest({
     this.size,
     this.freeSpace,
+    this.image,
   });
 
   Map<String, dynamic> toJson() => {
       if (size != null) 'size': size,
       if (freeSpace != null) 'freeSpace': freeSpace,
+      if (image != null) 'image': image,
     };
 }
